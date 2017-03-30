@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/algo cw.iml" filepath="$PROJECT_DIR$/algo cw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlgoFind.iml" filepath="$PROJECT_DIR$/AlgoFind.iml" />
     </modules>
   </component>
 </project>
