@@ -209,7 +209,7 @@ public class PathFindingOnSquaredGrid {
             for (Node dd : testarray) {
 
                 try {
-                    TimeUnit.MILLISECONDS.sleep(10);
+                    TimeUnit.MILLISECONDS.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -220,7 +220,7 @@ public class PathFindingOnSquaredGrid {
             for (Node node : path) {
 
                 try {
-                    TimeUnit.MILLISECONDS.sleep(100);
+                    TimeUnit.MILLISECONDS.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
