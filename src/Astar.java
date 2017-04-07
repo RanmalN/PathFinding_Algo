@@ -7,22 +7,33 @@ import java.util.*;
  */
 public class Astar {
 
+    //this array list add nodes that need to visit
     ArrayList<Node> openList = new ArrayList<Node>();
+    //this array list to add nodes that already visited, once node added to this node we never going to revisit that node again
     ArrayList<Node> closedList = new ArrayList<Node>();
 
+    // this is an additional array list maintain for visualize the visiting nodes, to find the path we dont need to keep this array list
     ArrayList<Node> test = new ArrayList<Node>();
 
+    //this variable for identify the current node on the grid
     Node current;
+    //this node will be a parent node for the current node what mention above
     Node temp;
+    //this start variable to initialize starting node of the grid, ( first point given user )
     Node start;
+    //this end variable to initialize destination node of the grid, ( second point given user )
     Node end;
+    //this 2d array  represent the  generated grid of nodes
     Node[][] nodeGrid;
 
 
 //    int z;
 
+    //to get the final cost of the shortest path
     double pathCost = 0;
+    //distance that need to increment for diagonal move
     double diagonalDistance;
+    //distance that need to increment for non-diagonal move
     double normalDistance;
 
     boolean isfound = false;
@@ -275,7 +286,6 @@ public class Astar {
             while (current.parent != null) {
                 path.add(current.parent);
                 current = current.parent;
-
 
             }
 
