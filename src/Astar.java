@@ -23,13 +23,17 @@ public class Astar {
     Node start;
     //this end variable to initialize destination node of the grid, ( second point given user )
     Node end;
+    //this 2d array  represent the  generated grid of nodes
     Node[][] nodeGrid;
 
 
 //    int z;
 
+    //to get the final cost of the shortest path
     double pathCost = 0;
+    //distance that need to increment for diagonal move
     double diagonalDistance;
+    //distance that need to increment for non-diagonal move
     double normalDistance;
 
     boolean isfound = false;
