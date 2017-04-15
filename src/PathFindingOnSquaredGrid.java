@@ -21,15 +21,15 @@ public class PathFindingOnSquaredGrid {
 //initial value for grid (n*n)
     static  int nValue = 10;
     //initial size for block nodes ratio
-    static final double ratio = 0.8;
+    static final double ratio = 0.6;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
 
-
+//generate grid matrix with black and white(block and non-block) cells
     static boolean[][] randomlyGenMatrix;
-
+//this variable to get and store the distance calculation method
     static String choice;
 
 
@@ -183,10 +183,11 @@ public class PathFindingOnSquaredGrid {
         while (true) {
             //start of the main method
             System.out.println("******************************************************************************************************************");
-            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
+            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H - ft . A* \n\n");
             System.out.println("******************************************************************************************************************");
 
 //get user value to set the size of the grid and set it
+
             Scanner in = new Scanner(System.in);
             System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
             nValue = in.nextInt();
@@ -265,7 +266,7 @@ public class PathFindingOnSquaredGrid {
 
             String choices = "" ;
             System.out.println("******************************************************************************************************************");
-            System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
+                System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
             choice = in.next();
             switch (choice) {
                 case "1":
@@ -302,13 +303,13 @@ public class PathFindingOnSquaredGrid {
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 
             ArrayList<Node> testarray = testing.testing();
-
+//set drawer pen green
             StdDraw.setPenColor(Color.green);
 
             int i = 0;
             int prex = 0;
             int prey = 0;
-
+//revers the path arraylist elements
             Collections.reverse(path);
 
             for (Node dd : testarray) {
